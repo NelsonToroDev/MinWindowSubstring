@@ -61,8 +61,9 @@ public class MainClass
             }
         }
 
-        minIndex = sortedIndexers.GetKeyAtIndex(0);
-        maxIndex = sortedIndexers.GetKeyAtIndex(sortedIndexers.Count - 1);
+        
+        minIndex = sortedIndexers.First().Key;
+        maxIndex = sortedIndexers.Last().Key;
 
         while(indexers.Count > 0)
         {
@@ -140,7 +141,7 @@ public class MainClass
             }
             else
             {
-                charIndexes = newText.Select((charToEvaluate, i) => c == charToEvaluate ? i : -1).Where(i => i != -1).ToList();
+                charIndexes = newText.Select((charToEvaluate, idx) => c == charToEvaluate ? idx : -1).Where(index => index != -1).ToList();
                 indexers.Add(c, (1, charIndexes));
             }
         }

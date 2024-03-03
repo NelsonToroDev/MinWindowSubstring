@@ -7,6 +7,11 @@ namespace MinWindowSubstringTests
         [InlineData(new string[] { "a**ba*c*a*", "abac" }, "ba*c*a")]
         [InlineData(new string[] { "ahffaksfajeeubsne", "jefaa" }, "aksfaje")]
         [InlineData(new string[] { "aaffhkksemckelloe", "fhea" }, "affhkkse")]
+        [InlineData(new string[] { "aabdccdbcacd", "aad" }, "aabd")]
+        [InlineData(new string[] { "aaaaaaaaa", "a" }, "a")]
+        [InlineData(new string[] { "aaffsfsfasfasfasfasfasfacasfafe", "fafsf" }, "affsf")]
+        [InlineData(new string[] { "vvavereveaevafefaef", "vvev" }, "vvave")]
+        [InlineData(new string[] { "cccaabbbbrr", "rbac" }, "caabbbbr")]
         public void TestSolutionMinWindowSubString(string[] strArr, string expected)
         {
             var result = Solution.MinWindowSubstring(strArr);
@@ -18,6 +23,11 @@ namespace MinWindowSubstringTests
         [InlineData(new string[] { "a**ba*c*a*", "abac" }, "ba*c*a")]
         [InlineData(new string[] { "ahffaksfajeeubsne", "jefaa" }, "aksfaje")]
         [InlineData(new string[] { "aaffhkksemckelloe", "fhea" }, "affhkkse")]
+        [InlineData(new string[] { "aabdccdbcacd", "aad" }, "aabd")]
+        [InlineData(new string[] { "aaaaaaaaa", "a" }, "a")]
+        [InlineData(new string[] { "aaffsfsfasfasfasfasfasfacasfafe", "fafsf" }, "affsf")]
+        [InlineData(new string[] { "vvavereveaevafefaef", "vvev" }, "vvave")]
+        [InlineData(new string[] { "cccaabbbbrr", "rbac" }, "caabbbbr")]
         public void TestMinWindowSubString(string[] strArr, string expected)
         {
             var result = MainClass.MinWindowSubstring(strArr);

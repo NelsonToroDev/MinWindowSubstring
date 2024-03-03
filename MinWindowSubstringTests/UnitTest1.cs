@@ -7,6 +7,17 @@ namespace MinWindowSubstringTests
         [InlineData(new string[] { "a**ba*c*a*", "abac" }, "ba*c*a")]
         [InlineData(new string[] { "ahffaksfajeeubsne", "jefaa" }, "aksfaje")]
         [InlineData(new string[] { "aaffhkksemckelloe", "fhea" }, "affhkkse")]
+        public void TestSolutionMinWindowSubString(string[] strArr, string expected)
+        {
+            var result = Solution.MinWindowSubstring(strArr);
+            Assert.Equal(expected, result);
+        }
+
+        [Theory]
+        [InlineData(new string[] { "01ab23", "ab" }, "ab")]
+        [InlineData(new string[] { "a**ba*c*a*", "abac" }, "ba*c*a")]
+        [InlineData(new string[] { "ahffaksfajeeubsne", "jefaa" }, "aksfaje")]
+        [InlineData(new string[] { "aaffhkksemckelloe", "fhea" }, "affhkkse")]
         public void TestMinWindowSubString(string[] strArr, string expected)
         {
             var result = MainClass.MinWindowSubstring(strArr);
